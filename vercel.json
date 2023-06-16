@@ -6,7 +6,7 @@
       },
       {
         "src": "build/**",
-        "use": "@vercel/assets"
+        "use": "@vercel/static"
       }
     ],
     "routes": [
@@ -15,7 +15,7 @@
         "dest": "index.js"
       },
       {
-        "src": "/products/.*",
+        "src": "/products/(.*)",
         "dest": "index.js"
       },
       {
@@ -27,7 +27,7 @@
         "dest": "build/assets/$1"
       },
       {
-        "src": "/.+",
+        "src": "/(.+)",
         "dest": "build/$1"
       }
     ]
