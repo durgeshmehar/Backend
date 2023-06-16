@@ -21,5 +21,8 @@
     "mongoose": "^7.2.2",
     "mongoose-plugin-autoinc": "^1.1.9",
     "morgan": "^1.10.0"
+  },
+  "env": {
+    "NODE_ENV": "production"
   }
 }
