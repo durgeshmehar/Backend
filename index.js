@@ -32,6 +32,6 @@ server.use(express.static( path.resolve(__dirname ,process.env.PUBLIC_DIR)))
 server.use('*', (req, res) => {
     res.sendFile( path.resolve(__dirname  ,"build","index.html"))
 })
-server.listen(3000, () => {
+server.listen(3000,"0.0.0.0", () => {
     console.log("Server started ...")
 })
