@@ -15,8 +15,12 @@ const mongoose = require('mongoose');
 main().catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log("Successfully Database connected")
+    try {
+        await mongoose.connect(process.env.MONGO_URL);
+        console.log("Successfully connected to database");
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 // console.log("ENV Password :",process.env.DB_PASSWORD);
