@@ -6,7 +6,7 @@
       },
       {
         "src": "build/**",
-        "use": "@vercel/static"
+        "use": "@vercel/assets"
       }
     ],
     "routes": [
